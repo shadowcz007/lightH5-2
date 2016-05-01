@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+ <html lang="en">
+  <meta charset="utf-8">
+  <head><title>Draw a Circle</title>
+   <style type="text/css">
+    body {
+      background-color: #e1e1e1;
+      margin: 0px;
+      overflow: hidden;
+    }
+   </style>
+   <script type="text/javascript" src="js/zepto.min.js"></script>
+ 
+<script type="text/javascript" src="js/touch.js"></script>
+  </head>
+ <body>
+<script>
+
+// canvas element and 2D context
+  var   canvas = document.createElement( 'canvas' ),
+  context = canvas.getContext( '2d' );
+  var canvasWidth = window.innerWidth; 
+  canvasHeight = window.innerHeight;
+  //初始化一个数组
+ var particles = [];
+  init();
+
+  function init() {
+    document.body.appendChild(canvas); 
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;     
+    setInterval(loop, 1000/30);
+   }
+
+function loop(){
+     // 清除canvas中的内容 
+  context.fillStyle = "#e1e1e1";
+  context.fillRect(0,0, canvasWidth, canvasHeight);
+    //在一些随机位置产生并画粒子。
+   var particle = new Particle(Math.random()*canvasWidth, Math.random()*canvasHeight);
+   particles.push(particle); //加入数组
+   // 绘制数组中的每一个粒子
+   for (i=0; i<particles.length; i++) {
+     var particle = particles[i]; 
+     particle.render(context); 
+     particle.update(); 
+  };
+  if (particles.length>20){//只保留20个粒子
+     particles.shift();
+    }
+
+  }
+
+  function Particle (xPos, yPos) { 
+   this.xPos = xPos;
+   this.yPos = yPos;
+   this.yVel = 15;//这个是重点啦，加入了纵向位置娈化量
+   this.counter = 0;//影响颜色
+    this.render = function(c){
+      // set the color of the fill
+   context.fillStyle =  "hsl("+this.counter+", 100%, 50%)";
+   // draw a circle of the required size
+   context.beginPath();
+   Ellipse(context,this.xPos, this.yPos, 1, 20);
+   // and fill it
+   context.fill();
+   };
+   this.update = function(){ //更新自己的方法
+     this.yPos += this.yVel; 
+     this.counter +=2;
+  };
+   
+  }
+
+ function Ellipse(context, x, y, a, b)
+{
+   context.save();
+   //选择a、b中的较大者作为arc方法的半径参数
+   var r = (a > b) ? a : b; 
+   var ratioX = a / r; //横轴缩放比率
+   var ratioY = b / r; //纵轴缩放比率
+   context.scale(ratioX, ratioY); //进行缩放（均匀压缩）
+   context.beginPath();
+   //从椭圆的左端点开始逆时针绘制
+   context.moveTo((x + a) / ratioX, y / ratioY);
+   context.arc(x / ratioX, y / ratioY, r, 0, 2 * Math.PI);
+   context.closePath();   
+   context.restore();
+};
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,387 @@
+body{
+	background-color: #e1e1e1;
+	}
+h1,h2,h3,h4,p{
+color: #281d20;
+	}
+h1{
+	font-size: 44px;
+	color: rgb(255, 223, 0);
+	text-align: left;
+	font-weight: bolder;
+	}
+h2{ 
+	margin-top:-40px;
+	font-size: 24px;
+	text-align: right;
+	font-weight: bold;
+	}
+h3{
+	font-size: 18px;
+	}
+p{
+	font-size: 1.2em;
+	}
+strong{
+	font-size: 1.4em;
+	color:rgb(255, 223, 0);
+	background-color: #281d20;
+	}
+header{ 
+		position: absolute;
+		top: 2%;
+		left: 5%;
+		width: 90%;
+		height: 24px;
+		border-bottom: double 6px #281d20;
+	}
+	.tiaowen img{
+	line-height: 30px;
+	float: left;
+  	width: 40px;
+  	height: 20px;
+  	border: none;
+	background-image: url('img/tiaowen.png');
+	}
+.tiaowen p{
+	 float: left;
+	 margin-left: 4px;
+	font-size: 10px;
+	line-height: 10px;
+}
+.title {
+text-align: center;
+padding: 14% 0;
+height: 72%;
+}
+footer{
+	position: absolute;	 	
+	width: 90%;	 
+	left: 5%;
+	text-align: center;
+	bottom: 2%;
+	border-top: 4px solid #281d20;
+	}
+footer p{	 
+		float: right;
+		font-size: 6px;
+	}
+.background{
+		background-color: #F5F5F5;
+		width: 90%;
+		height: 94%;
+		position: absolute;
+		left: 5%;
+		top: 3%; 
+	}
+.shadow{
+	position: absolute; 
+	max-width: 90%;
+	 box-shadow: 0px 1px 4px rgba(0,0,0,0.4), -28px -24px 36px rgba(0,0,0,0.1) inset;
+	  }
+ #page-ft{
+ 	position: absolute;
+ 	bottom: 3%;
+ 	left: 5.5%;
+ 	width: 90%;
+ 	height: 90%; 	
+ 	z-index: -99;
+ 	background-color:  #DDDDDD;
+ 	  -webkit-transform: rotate(-4deg);
+ 	box-shadow: 0px 1px 4px rgba(0,0,0,0.6), -8px -8px 36px rgba(0,0,0,0.1) inset;
+ }
+  #page-ft:after{
+  content: "";
+  position: absolute;
+  bottom: -1%;
+  left: 1%;
+  width: 105%;
+  height: 105%;
+  z-index: -100;
+  background-color: #DDDDDD;
+  -webkit-transform: rotate(8deg);
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.6), -8px -8px 36px rgba(0,0,0,0.1) inset;
+ }
+.nums{
+	margin-top: 4px;
+	height: 56px;
+	width: 90%;
+	position: relative;
+	left: 5%;
+	border-top: 6px solid  #2a2a2a;
+	border-bottom: 6px solid  #2a2a2a;
+}
+.date{
+	margin-left: 5%;
+	width: 90%;
+	border-bottom: 2px solid #4d4745;
+}
+.date p,div{
+	font-size: 8px;
+	font-weight: bold;
+	text-align: left;	
+	float: left;
+
+}
+.circle{
+	margin:0 6px;
+	margin-top: 2px;
+	width: 6px;
+	height: 6px;
+	border-radius: 6px;
+	background-color: rgb(255, 223, 0);
+}
+.redCircle{	
+	background-color:rgb(255, 223, 0);
+	height: 20px;
+	width: 20px;
+	border-radius: 20px;
+	font-size: 18px;
+	text-align: center;
+	color: white;
+}
+.Left{
+	position: absolute;
+	left: 8%;
+	top: 9%;	
+}
+.Right{
+	position: absolute;
+	right: 8%;
+	top: 9%;	
+} 
+.col-2{
+ 	width: 90%;
+ 	position: relative;
+ 	left: 5%;
+-webkit-column-count: 2;
+-webkit-column-gap: 2%;
+padding-bottom: 0px;
+ }
+ .col-2 p{
+text-align:justify;
+text-indent: 24px;
+padding: 1px 0;
+}
+.ZZ{
+margin-left: 8%;
+margin-top: -50%;
+}
+#copyright{
+	position: absolute;
+	right: 6%;
+	bottom: 6%;
+width: 72px;
+height: 72px;
+margin:0;
+padding: 0;
+ min-height:0;
+ min-width: 0;
+} 
+#copyright img{
+	width: 72px;
+	height: 72px;
+	margin: 0;
+	padding: 0;
+}
+.border{
+	margin-top: 8px;
+	border-bottom: 1px solid black;
+	margin-bottom: 8px;
+}
+
+.ui-frozen-cover{position:static;overflow: hidden;width: 100%;}
+.item{background:#e1e1e1;margin: 8px 0;margin-left: 5%;width: 90%;	height: 30%;max-height:300px;min-height:100px;display: -webkit-box;-webkit-box-pack:center; -webkit-box-align:center}
+.close{position:fixed;top:10px;right:10px;display: block;width:50px;height:50px;color:#fff;border:#fff 1px solid; text-align: center;border-radius: 50px;line-height: 50px;display: none;z-index: 2000}
+.Img{width:100%;height:100%;max-height:98px;-webkit-transition:all .5s .3s;}
+.info{width: 100px;height: 100px;-webkit-transition:all .5s;position: relative;top:0;left:0;z-index: 0;opacity: 0;-webkit-transform:translateY(50px);}
+.info.show{opacity: 1;-webkit-transform:translateY(0);}
+.bg{position: absolute;
+	top: 0;
+	left: 0; 
+	width: 100%;
+	height: auto;
+	z-index: -1;
+}
+#L1{position: absolute;
+	top: 0;
+	width: 56.4%;
+	height: auto;
+	z-index: 1224;
+}
+#L2{
+  position: absolute;
+  top: 0;
+  width: 56.2%;
+  height: auto;
+  z-index: 1222;
+}
+#L3{
+  position: absolute;
+  top: 0;
+  right:0;
+  width: 43%;
+  height: auto;
+  z-index: 1223;
+}
+#DS1{
+  position: absolute;
+  top: 29%;
+  left:29%;
+  width: 16%;
+  height: auto;
+  z-index: 1225;
+}
+#DS2{
+  position: absolute;
+  top: 68%;
+  right:5%;
+  width: 48%;
+  height: auto;
+  z-index: 1226;
+}
+.hidden{
+	display: none;
+}
+p.tipsText{
+position: fixed;
+width: 100%;
+height: 56px;
+background-color: black;
+text-align: center;
+padding-top: 28px;
+bottom: 0;
+font-size: 14px;
+color:rgb(255, 223, 0);
+z-index: 2000;
+}
+p.tipsText a{position: fixed;
+	bottom: 18px;
+	line-height: 50px;
+	right: 12px;
+display: block;
+background-color: rgb(255, 223, 0);
+width: 50px;
+height: 50px;
+color: black;
+border-radius: 44px;
+}
+.TX{
+	position: fixed;
+	width: 56px;
+  height: 56px;
+  bottom: 12%;
+  left: 10%;
+  z-index: 2002;
+}
+.Lconstrol{
+	position: absolute;	
+}
+.LC{
+	width: 88px;
+	margin-left: 24px;
+	border-radius: 88px;
+}
+#p1{	
+	background-size: 100%;	 
+	position: absolute;
+  	top: -100%;
+}
+#LC1{
+	position: absolute;
+	top: 300px;
+	left:12px;
+	width: 44px;
+}
+#LC2{
+	position: absolute;
+	top: 360px;
+	left:12px;
+	width: 44px;
+}
+#LC3{
+	position: absolute;
+	top: 420px;
+	left:12px;
+	width: 44px;
+}
+.LCSelcted{
+background-color:rgb(255, 223, 0);
+border: 2px solid rgb(255, 223, 0);  
+border-radius: 88px;
+}
+#Lightanimation{
+	margin-top: 94%;
+	margin-left: 98px;
+	width: 60%;
+	height: 30%;	
+	text-align: left;
+	padding: 8px 8px;
+}
+#Lightanimation blockquote{
+	margin-top: 12px;
+	text-align: left;
+	padding-left: 8px;
+	text-indent: 18px; 
+	color: #4A4A4A;
+	font-size: 9px;
+	border-left: 4px solid rgb(255, 223, 0);
+}
+.BottomFixed{position: absolute;
+	background-color: rgb(255, 223, 0);
+	top: 300px;
+  left: 240px;
+  width: 44px;
+	height: 44px;
+	font-size: 12px;
+	line-height: 44px;
+	text-align: center;
+	color: black;
+	border-radius: 50px;
+}
+#p2{
+background: no-repeat;	
+	background-size: 100%;	 
+	position: absolute;
+  	top: -200%;
+}
+#p2 #Lightanimation blockquote{	
+	border-left: 4px solid white;
+}
+#p3{
+background: no-repeat;	
+	background-size: 100%;	 
+	position: absolute;
+  	top: -300%;
+}
+
+ 
+#dragEle{
+		background-color: gray;
+	height:44px;
+	width: 44px;
+	position: absolute;
+	left: 45%;
+	top: 68%;
+	 
+	border-radius: 44px;
+	z-index: 22;
+	line-height: 44px;
+	text-align: center;
+	color: black;
+}
+#led2{
+	width: 100%;
+	z-index: 99;
+}
+#led1{
+position: absolute;
+	width: 100%;
+	z-index: 18;
+}
+#p4{
+background: no-repeat;	
+	background-size: 100%;	 
+	position: absolute;
+  	top: -400%;
+}
